@@ -12,6 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@main
+        submodules: true
       - uses: actions/setup-node@master
       - name: Build
         run: bash build.sh
