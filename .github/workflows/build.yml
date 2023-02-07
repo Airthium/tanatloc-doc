@@ -1,9 +1,10 @@
 name: Doc
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Submodule update"]
+    types:
+      - completed
 
 jobs:
   deploy:
